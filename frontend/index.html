@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SENTINEL - Login</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      background: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Courier New', monospace;
+      color: #1c1e21;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 40px;
+      width: 420px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.05);
+    }
+    .logo { text-align: center; margin-bottom: 30px; }
+    .logo h1 { font-size: 24px; color: #009900; letter-spacing: 3px; }
+    .logo p  { font-size: 11px; color: #606770; letter-spacing: 2px; margin-top: 4px; }
+    .logo small { font-size: 10px; color: #4a5080; }
+    label {
+      font-size: 11px;
+      color: #606770;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      background: #f5f6f7;
+      border: 1px solid #3a4a6e;
+      border-radius: 6px;
+      color: #1c1e21;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      margin-bottom: 18px;
+      outline: none;
+    }
+    input:focus { border-color: #606770; }
+    .password-wrap { position: relative; margin-bottom: 18px; }
+    .password-wrap input { margin-bottom: 0; padding-right: 42px; }
+    .eye-btn {
+      position: absolute; right: 12px; top: 50%;
+      transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      color: #606770; font-size: 16px; padding: 0;
+      width: auto; display: flex; align-items: center;
+    }
+    .eye-btn:hover { color: #009900; }
+    button.login-btn {
+      width: 100%; padding: 13px;
+      background: linear-gradient(135deg, #606770, #009900);
+      border: none; border-radius: 6px;
+      color: #ffffff; font-weight: 700;
+      font-size: 13px; letter-spacing: 2px;
+      cursor: pointer; margin-top: 6px;
+    }
+    button.login-btn:hover { opacity: 0.9; }
+    button.login-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    #message {
+      margin-top: 16px; padding: 12px;
+      border-radius: 6px; font-size: 12px;
+      display: none; text-align: center;
+    }
+    .success { background: rgba(0,153,0,0.1); border: 1px solid #009900; color: #009900; }
+    .error   { background: rgba(230,0,0,0.1); border: 1px solid #e60000; color: #e60000; }
+    .warning { background: rgba(230,138,0,0.1); border: 1px solid #e68a00; color: #e68a00; }
+
+    #cooldownBox {
+      display: none; margin-top: 16px; padding: 16px;
+      background: rgba(230,138,0,0.1);
+      border: 1px solid #e68a00; border-radius: 8px; text-align: center;
+    }
+    #cooldownBox p { font-size: 12px; color: #e68a00; margin-bottom: 10px; }
+    .timer-bar-wrap { height: 6px; background: #f5f6f7; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
+    .timer-bar { height: 100%; background: #e68a00; border-radius: 3px; transition: width 1s linear; }
+    #timerText { font-size: 11px; color: #e68a00; }
+
+    /* Email lock box */
+    #emailLockBox {
+      display: none; margin-top: 16px; padding: 20px;
+      background: rgba(230,0,0,0.1);
+      border: 1px solid #e60000; border-radius: 8px; text-align: center;
+    }
+    #emailLockBox h3 { color: #e60000; font-size: 14px; margin-bottom: 10px; }
+    #emailLockBox p { font-size: 12px; color: #1c1e21; line-height: 1.8; }
+    #emailLockBox .email-instruction {
+      margin-top: 12px; padding: 12px;
+      background: #f5f6f7; border-radius: 6px;
+      font-size: 12px; color: #e68a00;
+      border: 1px solid #e68a0044;
+    }
+
+    #aiBox {
+      margin-top: 12px; padding: 12px;
+      background: #f5f6f7; border-radius: 6px;
+      font-size: 11px; display: none;
+    }
+    .risk-bar-wrap { height: 6px; background: #ccd0d5; border-radius: 3px; margin-top: 6px; overflow: hidden; }
+    .risk-bar { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+    .hint {
+      font-size: 10px; color: #4a5080;
+      margin-top: 20px; text-align: center; line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">
+    <h1>SENTINEL</h1>
+    <p>HYBRID DYNAMIC SECURITY ENFORCER</p>
+    <small>Don Bosco Institute of Technology</small>
+  </div>
+
+  <label>EMAIL</label>
+  <input type="email" id="email" placeholder="keerthana@dbit.com"/>
+
+  <label>PASSWORD</label>
+  <div class="password-wrap">
+    <input type="password" id="password" placeholder="........"/>
+    <button class="eye-btn" onclick="togglePassword()" type="button" id="eyeBtn">👁</button>
+  </div>
+
+  <button class="login-btn" id="loginBtn" onclick="doLogin()">LOGIN</button>
+
+  <div id="message"></div>
+
+  <!-- Cooldown timer box (after 3 fails) -->
+  <div id="cooldownBox">
+    <p>⏱ Too many failed attempts!<br>Please wait before trying again.</p>
+    <div class="timer-bar-wrap">
+      <div class="timer-bar" id="timerBar" style="width:100%"></div>
+    </div>
+    <div id="timerText">30 seconds remaining...</div>
+  </div>
+
+  <!-- Email lock box (after 5 fails) -->
+  <div id="emailLockBox">
+    <h3>🔒 Account Locked!</h3>
+    <p>Too many failed login attempts.<br/>Your account has been locked for security.</p>
+    <div class="email-instruction">
+      📧 Check your email and click<br/>
+      <strong>"YES, Unlock my account"</strong><br/>
+      to regain access.
+    </div>
+  </div>
+
+  <div id="aiBox">
+    <div id="aiText"></div>
+    <div class="risk-bar-wrap">
+      <div class="risk-bar" id="riskBar"></div>
+    </div>
+  </div>
+
+  <div class="hint">
+    keerthana@dbit.com / keer123 (admin)<br/>
+    koushalya@dbit.com / kous456 (user)<br/>
+    hacker@evil.com / hack789 (demo)
+  </div>
+</div>
+
+<script>
+  var failCount = 0;
+  var inCooldown = false;
+  var postCooldown = false;  // after cooldown, only 2 more attempts
+  var postCooldownFails = 0; // track attempts after cooldown
+  var cooldownSeconds = 30;
+  var timerInterval = null;
+  var passwordVisible = false;
+  var accountLocked = false;
+
+  function togglePassword() {
+    var pwInput = document.getElementById("password");
+    var eyeBtn  = document.getElementById("eyeBtn");
+    passwordVisible = !passwordVisible;
+    pwInput.type = passwordVisible ? "text" : "password";
+    eyeBtn.textContent = passwordVisible ? "🙈" : "👁";
+  }
+
+  function startCooldown() {
+    inCooldown = true;
+    var remaining = cooldownSeconds;
+    var loginBtn   = document.getElementById("loginBtn");
+    var cooldownBox = document.getElementById("cooldownBox");
+    var timerBar   = document.getElementById("timerBar");
+    var timerText  = document.getElementById("timerText");
+
+    loginBtn.disabled = true;
+    cooldownBox.style.display = "block";
+    timerBar.style.width = "100%";
+
+    timerInterval = setInterval(function() {
+      remaining--;
+      var pct = (remaining / cooldownSeconds) * 100;
+      timerBar.style.width = pct + "%";
+      timerText.textContent = remaining + " seconds remaining...";
+
+      if (remaining <= 0) {
+        clearInterval(timerInterval);
+        inCooldown = false;
+        postCooldown = true;   // ✅ now only 2 more attempts allowed
+        postCooldownFails = 0;
+        loginBtn.disabled = false;
+        cooldownBox.style.display = "none";
+        showMsg("⚠️ You have 2 more attempts before your account is locked!", "warning");
+      }
+    }, 1000);
+  }
+
+  let lockPollInterval = null;
+  function showEmailLock() {
+    accountLocked = true;
+    document.getElementById("loginBtn").disabled = true;
+    document.getElementById("cooldownBox").style.display = "none";
+    document.getElementById("emailLockBox").style.display = "block";
+    document.getElementById("email").disabled = true;
+    document.getElementById("password").disabled = true;
+    showMsg("🔒 Account locked! Check your email.", "error");
+
+    var email = document.getElementById("email").value.trim();
+    if (lockPollInterval) clearInterval(lockPollInterval);
+    lockPollInterval = setInterval(async function() {
+      try {
+        var res = await fetch("http://localhost:3000/api/policy/" + encodeURIComponent(email));
+        var data = await res.json();
+        if (data && data.locked === false) {
+          clearInterval(lockPollInterval);
+          accountLocked = false;
+          postCooldown = false;
+          postCooldownFails = 0;
+          failCount = 0;
+          document.getElementById("loginBtn").disabled = false;
+          document.getElementById("emailLockBox").style.display = "none";
+          document.getElementById("email").disabled = false;
+          document.getElementById("password").disabled = false;
+          showMsg("✅ Account unlocked! You may now login.", "success");
+        }
+      } catch(e) {}
+    }, 3000);
+  }
+
+  async function doLogin() {
+    if (inCooldown || accountLocked) return;
+
+    var email    = document.getElementById("email").value.trim();
+    var password = document.getElementById("password").value;
+
+    if (!email || !password) {
+      showMsg("Please enter email and password", "error");
+      return;
+    }
+
+    showMsg("Authenticating...", "warning");
+
+    try {
+      var res = await fetch("http://localhost:3000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password, failCount })
+      });
+      var data = await res.json();
+
+      // Show AI result
+      var aiBox   = document.getElementById("aiBox");
+      var aiText  = document.getElementById("aiText");
+      var riskBar = document.getElementById("riskBar");
+      aiBox.style.display = "block";
+
+      var score = data.risk_score || 0;
+      var color = score > 70 ? "#e60000" : score > 40 ? "#e68a00" : "#009900";
+      aiText.innerHTML = "AI Result: " + (data.aiResult || "N/A") + " | Risk Score: " + score + "/100";
+      aiText.style.color = color;
+      riskBar.style.width = score + "%";
+      riskBar.style.background = color;
+
+      if (data.success) {
+        failCount = 0;
+        showMsg("✅ Login successful! Redirecting...", "success");
+        localStorage.setItem("user", JSON.stringify(data.user));
+        setTimeout(function() {
+          window.location.href = "/home.html";
+        }, 1500);
+
+      } else {
+
+        // Account locked by server
+        if (data.locked) {
+          showEmailLock();
+          return;
+        }
+
+        // After cooldown — only 2 more attempts
+        if (postCooldown) {
+          postCooldownFails++;
+
+          if (postCooldownFails >= 2) {
+            // 5th total attempt → lock account
+            showEmailLock();
+            return;
+          } else {
+            // 4th total attempt → last warning
+            showMsg("⚠️ Last attempt! Next failure will lock your account.", "error");
+            return;
+          }
+        }
+
+        // Normal fails (1st, 2nd, 3rd)
+        failCount++;
+        if (failCount >= 3) {
+          showMsg("⚠️ Too many failed attempts! Please wait...", "error");
+          startCooldown();
+        } else {
+          var remaining = 3 - failCount;
+          showMsg("❌ Invalid credentials! " + remaining + " attempt(s) before cooldown.", "error");
+        }
+      }
+
+    } catch(err) {
+      showMsg("Cannot connect to server. Is Node.js running?", "error");
+    }
+  }
+
+  function showMsg(text, type) {
+    var el = document.getElementById("message");
+    el.textContent = text;
+    el.className = type;
+    el.style.display = "block";
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Enter" && !inCooldown && !accountLocked) doLogin();
+  });
+</script>
+</body>
+</html>

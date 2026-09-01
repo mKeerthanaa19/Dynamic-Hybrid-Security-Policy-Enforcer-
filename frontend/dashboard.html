@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SENTINEL – Admin Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      background: #f0f2f5;
+      font-family: 'Courier New', monospace;
+      color: #1c1e21;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      background: #ffffff;
+      border-bottom: 1px solid #60677033;
+    }
+    .logo { color: #009900; font-size: 16px; font-weight: 700; letter-spacing: 3px; }
+    .live { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #009900; }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #009900; animation: blink 1.4s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .container { padding: 24px 28px; }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .stat-card { background: #ffffff; border-radius: 10px; padding: 20px; }
+    .stat-card .label { font-size: 10px; color: #606770; letter-spacing: 2px; margin-bottom: 8px; }
+    .stat-card .value { font-size: 36px; font-weight: 700; }
+
+    /* Feed */
+    .feed {
+      background: #ffffff;
+      border: 1px solid #60677022;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+    .feed h3 { font-size: 12px; color: #606770; letter-spacing: 2px; margin-bottom: 16px; }
+    .feed-entry {
+      display: grid;
+      grid-template-columns: 80px 140px 180px 1fr 90px 80px;
+      gap: 10px;
+      align-items: center;
+      padding: 9px 12px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      font-size: 11px;
+      background: #f5f6f7;
+    }
+    .badge {
+      padding: 2px 8px; border-radius: 4px;
+      font-size: 10px; font-weight: 700; text-align: center;
+    }
+    .risk-mini { height: 4px; border-radius: 2px; background: #ccd0d5; margin-top: 4px; overflow: hidden; }
+    .risk-fill { height: 100%; border-radius: 2px; }
+
+    /* ── AI Panel ── */
+    .ai-panel {
+      background: #ffffff;
+      border: 1px solid #00990033;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+    .ai-panel h3 { font-size: 12px; color: #009900; letter-spacing: 2px; margin-bottom: 16px; }
+    .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    /* Model Comparison Table */
+    .model-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    .model-table th {
+      background: #f5f6f7; padding: 8px 12px;
+      text-align: left; font-size: 10px;
+      color: #606770; letter-spacing: 1px;
+      border-bottom: 1px solid #60677022;
+    }
+    .model-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #60677011;
+    }
+    .model-table tr:last-child td { border-bottom: none; }
+    .model-table tr.winner td { background: #00990011; }
+    .winner-badge {
+      font-size: 9px; background: #00990022;
+      color: #009900; padding: 2px 6px;
+      border-radius: 3px; margin-left: 6px;
+    }
+
+    /* SHAP Explanation */
+    .shap-panel { background: #f5f6f7; border-radius: 8px; padding: 14px; }
+    .shap-panel .shap-title {
+      font-size: 10px; color: #606770;
+      letter-spacing: 2px; margin-bottom: 12px;
+    }
+    .shap-bar-row { margin-bottom: 10px; }
+    .shap-bar-label {
+      display: flex; justify-content: space-between;
+      font-size: 10px; margin-bottom: 4px;
+    }
+    .shap-bar-track {
+      height: 8px; background: #ccd0d5;
+      border-radius: 4px; overflow: hidden;
+    }
+    .shap-bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s; }
+
+    /* Latest Event AI Detail */
+    .latest-ai {
+      background: #f5f6f7; border-radius: 8px;
+      padding: 14px; margin-bottom: 14px;
+    }
+    .latest-ai .ai-row {
+      display: flex; justify-content: space-between;
+      align-items: center; margin-bottom: 8px;
+      font-size: 11px;
+    }
+    .risk-level-badge {
+      padding: 3px 10px; border-radius: 4px;
+      font-size: 11px; font-weight: 700;
+    }
+    .model-vote {
+      display: inline-flex; gap: 6px;
+      align-items: center; flex-wrap: wrap;
+    }
+    .vote-chip {
+      font-size: 9px; padding: 2px 8px;
+      border-radius: 3px; font-weight: 700;
+    }
+
+    /* ICMP */
+    .icmp-section {
+      background: #ffffff;
+      border: 1px solid #60677033;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+    .icmp-section h3 { font-size: 12px; color: #606770; letter-spacing: 2px; margin-bottom: 16px; }
+    .icmp-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 16px; }
+    .icmp-card { background: #f5f6f7; border-radius: 8px; padding: 14px; text-align: center; }
+    .icmp-card .label { font-size: 10px; color: #606770; letter-spacing: 2px; margin-bottom: 6px; }
+    .icmp-card .value { font-size: 18px; font-weight: 700; }
+    .ping-btn {
+      padding: 8px 16px; border-radius: 6px;
+      font-size: 11px; cursor: pointer; font-family: monospace;
+    }
+
+    /* Packets */
+    .packet-feed {
+      background: #ffffff;
+      border: 1px solid #00990033;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+    .packet-feed h3 { font-size: 12px; color: #009900; letter-spacing: 2px; margin-bottom: 16px; }
+    .packet-entry {
+      display: grid;
+      grid-template-columns: 90px 2.5fr 2fr 80px 60px 80px 100px;
+      gap: 15px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      font-size: 10px;
+      background: #f5f6f7;
+    }
+    .packet-header {
+      display: grid;
+      grid-template-columns: 90px 2.5fr 2fr 80px 60px 80px 100px;
+      gap: 15px;
+      padding: 0 12px;
+      margin-bottom: 8px;
+      font-size: 9px;
+      color: #333333;
+    }
+    .ipv6-badge {
+      color: #e68a00; font-size: 9px;
+      background: #e68a0022; padding: 1px 4px; border-radius: 3px;
+    }
+    .ipv4-badge {
+      color: #009900; font-size: 9px;
+      background: #00990022; padding: 1px 4px; border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🛡 SENTINEL DASHBOARD</div>
+  <div style="display:flex;gap:20px;align-items:center;">
+    <div class="live"><div class="dot"></div>LIVE</div>
+    <a href="/" style="color:#606770;font-size:11px;text-decoration:none;">← Back to Login</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat-card" style="border:1px solid #00990033">
+      <div class="label">TOTAL EVENTS</div>
+      <div class="value" id="totalEvents" style="color:#009900">0</div>
+    </div>
+    <div class="stat-card" style="border:1px solid #60677033">
+      <div class="label">LOGIN SUCCESS</div>
+      <div class="value" id="loginSuccess" style="color:#606770">0</div>
+    </div>
+    <div class="stat-card" style="border:1px solid #e6000033">
+      <div class="label">LOGIN FAILED</div>
+      <div class="value" id="loginFailed" style="color:#e60000">0</div>
+    </div>
+    <div class="stat-card" style="border:1px solid #e6000033">
+      <div class="label">ANOMALIES</div>
+      <div class="value" id="anomalies" style="color:#e60000">0</div>
+    </div>
+  </div>
+
+  <!-- Live Feed -->
+  <div class="feed">
+    <h3>⚡ LIVE ACTIVITY FEED</h3>
+    <div style="display:grid;grid-template-columns:80px 140px 180px 1fr 90px 80px;
+                gap:10px;padding:0 12px;margin-bottom:8px;font-size:10px;color:#4a5080;">
+      <span>TIME</span><span>EVENT</span><span>USER</span>
+      <span>DETAIL</span><span>RISK</span><span>RESULT</span>
+    </div>
+    <div id="feedEntries">
+      <div style="text-align:center;color:#4a5080;padding:20px;font-size:12px;">
+        Waiting for events...
+      </div>
+    </div>
+  </div>
+
+  <!-- ── AI Intelligence Panel ── -->
+  <div class="ai-panel">
+    <h3>🤖 AI INTELLIGENCE — MODELS + EXPLAINABILITY</h3>
+
+    <!-- Latest Event AI Detail -->
+    <div class="latest-ai" id="latestAIDetail">
+      <div style="font-size:10px;color:#606770;letter-spacing:2px;margin-bottom:12px;">
+        LATEST ANOMALY ANALYSIS
+      </div>
+      <div class="ai-row">
+        <span style="color:#606770;">THREAT</span>
+        <span id="threatLabel" style="color:#e60000;font-weight:700;">—</span>
+      </div>
+      <div class="ai-row">
+        <span style="color:#606770;">RISK LEVEL</span>
+        <span id="riskLevelBadge" class="risk-level-badge"
+              style="background:#60677022;color:#606770;">—</span>
+      </div>
+      <div class="ai-row">
+        <span style="color:#606770;">RISK SCORE</span>
+        <span id="latestRiskScore" style="color:#606770;">—</span>
+      </div>
+      <div class="ai-row">
+        <span style="color:#606770;">MODEL VOTES</span>
+        <div class="model-vote" id="modelVotes">—</div>
+      </div>
+      <div class="ai-row">
+        <span style="color:#606770;">FINAL DECISION</span>
+        <span id="finalDecision" style="font-weight:700;color:#606770;">—</span>
+      </div>
+    </div>
+
+    <div class="ai-grid">
+
+      <!-- Model Comparison Table -->
+      <div>
+        <div style="font-size:10px;color:#606770;letter-spacing:2px;margin-bottom:10px;">
+          MODEL COMPARISON
+        </div>
+        <table class="model-table" id="modelCompareTable">
+          <thead>
+            <tr>
+              <th>MODEL</th>
+              <th>ACCURACY</th>
+              <th>PRECISION</th>
+              <th>RECALL</th>
+              <th>F1</th>
+            </tr>
+          </thead>
+          <tbody id="modelTableBody">
+            <tr>
+              <td colspan="5" style="color:#606770;text-align:center;padding:16px;">
+                Loading model metrics...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="font-size:9px;color:#606770;margin-top:8px;">
+          * Metrics computed on test data. Improves with real dataset.
+        </div>
+      </div>
+
+      <!-- SHAP Explanation -->
+      <div class="shap-panel">
+        <div class="shap-title">SHAP — WHY WAS IT FLAGGED?</div>
+        <div id="shapBars">
+          <div style="color:#606770;font-size:11px;text-align:center;padding:20px;">
+            Waiting for anomaly event...
+          </div>
+        </div>
+        <div id="shapSummary"
+             style="font-size:10px;color:#606770;margin-top:12px;line-height:1.6;">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ICMP Network Status -->
+  <div class="icmp-section">
+    <h3>🌐 NETWORK STATUS — ICMP MONITOR</h3>
+    <div class="icmp-grid">
+      <div class="icmp-card">
+        <div class="label">STATUS</div>
+        <div class="value" id="icmpStatus" style="color:#009900">ONLINE</div>
+      </div>
+      <div class="icmp-card">
+        <div class="label">LATENCY</div>
+        <div class="value" id="icmpLatency" style="color:#606770">0ms</div>
+      </div>
+      <div class="icmp-card">
+        <div class="label">PACKET LOSS</div>
+        <div class="value" id="icmpLoss" style="color:#009900">0%</div>
+      </div>
+      <div class="icmp-card">
+        <div class="label">PING COUNT</div>
+        <div class="value" id="icmpCount" style="color:#606770">0</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <button class="ping-btn"
+        style="background:#60677022;border:1px solid #606770;color:#606770;"
+        onclick="pingTarget('127.0.0.1')">PING LOCALHOST</button>
+      <button class="ping-btn"
+        style="background:#00990022;border:1px solid #009900;color:#009900;"
+        onclick="pingTarget('8.8.8.8')">PING GOOGLE DNS</button>
+      <button id="pingGatewayBtn" class="ping-btn"
+        style="background:#e68a0022;border:1px solid #e68a00;color:#e68a00;"
+        onclick="pingTarget(gatewayIP)">PING GATEWAY</button>
+      <div id="pingResult" style="font-size:11px;color:#606770;padding:8px;"></div>
+    </div>
+  </div>
+
+  <!-- Packet Monitor -->
+  <div class="packet-feed">
+    <h3>📡 NETWORK PACKET MONITOR</h3>
+    <div class="packet-header">
+      <span>TIME</span><span>SRC ADDRESS</span><span>LOCATION</span>
+      <span>PROTOCOL</span><span>PORT</span><span>SIZE</span><span>STATUS</span>
+    </div>
+    <div id="packetEntries">
+      <div style="text-align:center;color:#4a5080;padding:20px;font-size:12px;">
+        Waiting for packets...
+      </div>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<script>
+  let gatewayIP = "10.245.148.167";
+
+  const EVENT_META = {
+    LOGIN_SUCCESS:           { color: "#009900", label: "LOGIN OK"    },
+    LOGIN_FAILED:            { color: "#e60000", label: "LOGIN FAIL"  },
+    LOGIN_BLOCKED:           { color: "#e60000", label: "BLOCKED"     },
+    LOGIN_ANOMALY:           { color: "#e60000", label: "AI BLOCK"    },
+    LOGOUT:                  { color: "#606770", label: "LOGOUT"      },
+    ACTIVITY:                { color: "#a29bfe", label: "ACTIVITY"    },
+    SESSION_TIMEOUT:         { color: "#e68a00", label: "TIMEOUT"     },
+    SESSION_CONFIRMED:       { color: "#009900", label: "CONFIRMED"   },
+    SESSION_BLOCKED_BY_USER: { color: "#e60000", label: "USR BLOCK"   },
+    AUTO_BLOCK_NO_RESPONSE:  { color: "#e60000", label: "AUTO BLOCK"  },
+    ACCOUNT_LOCKED:          { color: "#e60000", label: "LOCKED"      },
+    ACCOUNT_UNLOCKED:        { color: "#009900", label: "UNLOCKED"    },
+    MALICIOUS_INPUT:         { color: "#e60000", label: "MALICIOUS"   },
+  };
+
+  function fmt(ts) {
+    return new Date(ts).toLocaleTimeString("en-US", {
+      hour: "2-digit", minute: "2-digit", second: "2-digit"
+    });
+  }
+
+  function getRiskColor(score) {
+    if (!score && score !== 0) return "#606770";
+    return score > 70 ? "#e60000" : score > 40 ? "#e68a00" : "#009900";
+  }
+
+  function getRiskLevelColor(level) {
+    const map = {
+      "CRITICAL": { bg: "#e6000022", color: "#e60000" },
+      "HIGH":     { bg: "#e68a0022", color: "#e68a00" },
+      "MEDIUM":   { bg: "#f0a50022", color: "#e68a00" },
+      "LOW":      { bg: "#00990022", color: "#009900" }
+    };
+    return map[level] || { bg: "#60677022", color: "#606770" };
+  }
+
+  // ── Update Stats ──────────────────────────────────────────────────────────
+  function updateStats(stats) {
+    document.getElementById("totalEvents").textContent  = stats.totalEvents  || 0;
+    document.getElementById("loginSuccess").textContent = stats.loginSuccess || 0;
+    document.getElementById("loginFailed").textContent  = stats.loginFailed  || 0;
+    document.getElementById("anomalies").textContent    = stats.anomalies    || 0;
+  }
+
+  // ── Update Feed ───────────────────────────────────────────────────────────
+  function updateFeed(logs) {
+    const container = document.getElementById("feedEntries");
+    if (!logs.length) return;
+    container.innerHTML = "";
+    logs.forEach(log => {
+      const meta      = EVENT_META[log.event] || { color: "#606770", label: log.event };
+      const score     = log.risk_score ?? 0;
+      const riskColor = getRiskColor(score);
+      const entry     = document.createElement("div");
+      entry.className = "feed-entry";
+      entry.innerHTML = `
+        <span style="color:#4a5080">${fmt(log.timestamp)}</span>
+        <span class="badge" style="background:${meta.color}22;color:${meta.color};">
+          ${meta.label}
+        </span>
+        <span style="color:#333333">${log.user || "—"}</span>
+        <span style="color:#4a5080">${log.action || log.reason || log.role || "—"}</span>
+        <div>
+          <span style="color:${riskColor};font-size:10px">${score}/100</span>
+          <div class="risk-mini">
+            <div class="risk-fill" style="width:${score}%;background:${riskColor}"></div>
+          </div>
+        </div>
+        <span style="color:${
+          log.result === 'BLOCKED' || log.result === 'FAILED' ? '#e60000' : '#009900'
+        };font-size:10px">${log.result || "—"}</span>`;
+      container.appendChild(entry);
+    });
+
+    // ── Update AI panel from latest anomaly log ────────────────────────────
+    const anomalyLogs = logs.filter(l =>
+      l.event === "LOGIN_ANOMALY" || l.event === "ACTIVITY" && l.risk_score > 50
+    );
+    if (anomalyLogs.length > 0) {
+      const latest = anomalyLogs[anomalyLogs.length - 1];
+      updateLatestAI(latest);
+    }
+  }
+
+  // ── Update Latest AI Detail ───────────────────────────────────────────────
+  function updateLatestAI(log) {
+    const score      = log.risk_score ?? 0;
+    const riskLevel  = log.risk_level || getRiskLevelFromScore(score);
+    const threat     = log.threat_label || classifyThreat(score);
+    const riskColors = getRiskLevelColor(riskLevel);
+
+    document.getElementById("threatLabel").textContent        = threat;
+    document.getElementById("latestRiskScore").textContent    = score + "/100";
+    document.getElementById("latestRiskScore").style.color    = getRiskColor(score);
+    document.getElementById("finalDecision").textContent      = score > 50 ? "⚠ ANOMALY DETECTED" : "✓ NORMAL";
+    document.getElementById("finalDecision").style.color      = score > 50 ? "#e60000" : "#009900";
+
+    const badge = document.getElementById("riskLevelBadge");
+    badge.textContent        = riskLevel;
+    badge.style.background   = riskColors.bg;
+    badge.style.color        = riskColors.color;
+
+    // Model votes — if available from log
+    const votesEl = document.getElementById("modelVotes");
+    if (log.models) {
+      const models = log.models;
+      votesEl.innerHTML = `
+        <span class="vote-chip" style="background:${models.isolation_forest === 'ANOMALY' ? '#e6000022' : '#00990022'};
+              color:${models.isolation_forest === 'ANOMALY' ? '#e60000' : '#009900'};">
+          IF: ${models.isolation_forest}
+        </span>
+        <span class="vote-chip" style="background:${models.one_class_svm === 'ANOMALY' ? '#e6000022' : '#00990022'};
+              color:${models.one_class_svm === 'ANOMALY' ? '#e60000' : '#009900'};">
+          SVM: ${models.one_class_svm}
+        </span>
+        <span class="vote-chip" style="background:${models.lof === 'ANOMALY' ? '#e6000022' : '#00990022'};
+              color:${models.lof === 'ANOMALY' ? '#e60000' : '#009900'};">
+          LOF: ${models.lof}
+        </span>`;
+    } else {
+      votesEl.innerHTML = `<span style="color:#606770;font-size:10px;">No vote data yet</span>`;
+    }
+
+    // SHAP bars — if available from log
+    if (log.shap_explanation && log.shap_explanation.length > 0) {
+      updateSHAP(log.shap_explanation);
+    }
+  }
+
+  // ── Update SHAP Bars ──────────────────────────────────────────────────────
+  function updateSHAP(shapData) {
+    const container = document.getElementById("shapBars");
+    const summary   = document.getElementById("shapSummary");
+    container.innerHTML = "";
+
+    const featureLabels = {
+      "login_hour":      "Login Hour",
+      "failed_attempts": "Failed Attempts",
+      "request_count":   "Request Count"
+    };
+
+    shapData.forEach(item => {
+      const barColor = item.direction === "increases" ? "#e60000" : "#009900";
+      const label    = featureLabels[item.feature] || item.feature;
+      const row      = document.createElement("div");
+      row.className  = "shap-bar-row";
+      row.innerHTML  = `
+        <div class="shap-bar-label">
+          <span style="color:#333333;">${label}
+            <span style="color:#606770;font-size:9px;">(${item.value})</span>
+          </span>
+          <span style="color:${barColor};font-weight:700;">${item.contribution}%</span>
+        </div>
+        <div class="shap-bar-track">
+          <div class="shap-bar-fill"
+               style="width:${item.contribution}%;background:${barColor};">
+          </div>
+        </div>`;
+      container.appendChild(row);
+    });
+
+    // Summary sentence
+    if (shapData.length > 0) {
+      const top = shapData[0];
+      const topLabel = featureLabels[top.feature] || top.feature;
+      summary.textContent =
+        `Main reason: "${topLabel}" contributed ${top.contribution}% to this anomaly detection.`;
+    }
+  }
+
+  // ── Fallback helpers ──────────────────────────────────────────────────────
+  function getRiskLevelFromScore(score) {
+    if (score <= 30) return "LOW";
+    if (score <= 60) return "MEDIUM";
+    if (score <= 80) return "HIGH";
+    return "CRITICAL";
+  }
+
+  function classifyThreat(score) {
+    if (score >= 81) return "Critical Anomalous Behavior";
+    if (score >= 61) return "High-Risk Suspicious Activity";
+    if (score >= 31) return "Medium-Risk Anomaly";
+    return "Low-Risk Anomaly";
+  }
+
+  // ── Load Model Comparison Table ───────────────────────────────────────────
+  async function loadModelComparison() {
+    try {
+      const res  = await fetch("http://localhost:5001/model/compare");
+      const data = await res.json();
+      const tbody = document.getElementById("modelTableBody");
+      tbody.innerHTML = "";
+
+      const models  = data.models;
+      const names   = Object.keys(models);
+
+      // Find best F1 for winner highlight
+      const bestF1  = Math.max(...names.map(n => models[n].f1));
+
+      names.forEach(name => {
+        const m      = models[name];
+        const isWinner = m.f1 === bestF1;
+        const tr     = document.createElement("tr");
+        if (isWinner) tr.className = "winner";
+        tr.innerHTML = `
+          <td style="color:#333333;font-weight:${isWinner ? '700' : '400'}">
+            ${name}
+            ${isWinner ? '<span class="winner-badge">BEST</span>' : ''}
+          </td>
+          <td style="color:#009900">${m.accuracy}%</td>
+          <td style="color:#606770">${m.precision}%</td>
+          <td style="color:#606770">${m.recall}%</td>
+          <td style="color:${isWinner ? '#009900' : '#606770'};font-weight:${isWinner ? '700' : '400'}">
+            ${m.f1}%
+          </td>`;
+        tbody.appendChild(tr);
+      });
+    } catch(err) {
+      console.log("Model compare not reachable yet");
+    }
+  }
+
+  // ── Update Packets ────────────────────────────────────────────────────────
+  function updatePackets(packets) {
+    const container = document.getElementById("packetEntries");
+    if (!packets.length) return;
+    container.innerHTML = "";
+    packets.forEach(p => {
+      const isIPv6      = p.is_ipv6;
+      const statusColor = p.status === "ALLOWED"  ? "#009900" :
+                          p.status === "RECEIVED" ? "#606770" :
+                          p.status === "DROPPED"  ? "#e68a00" : "#e60000";
+      const entry       = document.createElement("div");
+      entry.className   = "packet-entry";
+      entry.style.borderLeft = `3px solid ${statusColor}`;
+      entry.innerHTML   = `
+        <span style="color:#4a5080">
+          ${new Date(p.timestamp).toLocaleTimeString("en-US",{
+            hour:"2-digit",minute:"2-digit",second:"2-digit"
+          })}
+        </span>
+        <span style="color:${isIPv6 ? '#e68a00' : '#009900'};
+              font-family:monospace;font-size:9px">
+          ${p.src_ip}
+          <span class="${isIPv6 ? 'ipv6-badge' : 'ipv4-badge'}">
+            ${isIPv6 ? 'IPv6' : 'IPv4'}
+          </span>
+        </span>
+        <span style="color:#606770;font-size:9px">
+          ${p.city || 'Unknown'}, ${p.country || 'Unknown'}
+          ${p.countryCode ? '🌍' : ''}
+        </span>
+        <span style="color:#606770">${p.protocol}</span>
+        <span style="color:#4a5080">${p.port}</span>
+        <span style="color:#606770">${p.size}B</span>
+        <span style="color:${statusColor};font-weight:700">${p.status}</span>`;
+      container.appendChild(entry);
+    });
+  }
+
+  // ── ICMP ──────────────────────────────────────────────────────────────────
+  async function updateICMP() {
+    try {
+      const res  = await fetch("http://localhost:5001/icmp/stats");
+      const data = await res.json();
+      const statusEl  = document.getElementById("icmpStatus");
+      const latencyEl = document.getElementById("icmpLatency");
+      const lossEl    = document.getElementById("icmpLoss");
+      const countEl   = document.getElementById("icmpCount");
+      statusEl.textContent  = data.status;
+      statusEl.style.color  = data.status === "ONLINE" ? "#009900" : "#e60000";
+      latencyEl.textContent = data.latency + "ms";
+      lossEl.textContent    = data.packet_loss + "%";
+      lossEl.style.color    = data.packet_loss > 0 ? "#e60000" : "#009900";
+      countEl.textContent   = data.ping_count;
+      if (data.gateway) {
+        gatewayIP = data.gateway;
+        const btn = document.getElementById("pingGatewayBtn");
+        if (btn) btn.textContent = "PING GATEWAY (" + gatewayIP + ")";
+      }
+    } catch(err) {
+      console.log("ICMP module not reachable");
+    }
+  }
+
+  async function pingTarget(target) {
+    const resultEl = document.getElementById("pingResult");
+    resultEl.textContent = "Pinging " + target + "...";
+    resultEl.style.color = "#e68a00";
+    try {
+      const res  = await fetch("http://localhost:5001/icmp/ping", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ target })
+      });
+      const data = await res.json();
+      if (data.status === "ONLINE") {
+        resultEl.textContent =
+          "✅ " + target + " ONLINE | Latency: " + data.latency +
+          "ms | Protocol: " + data.protocol;
+        resultEl.style.color = "#009900";
+      } else {
+        resultEl.textContent = "❌ " + target + " OFFLINE!";
+        resultEl.style.color = "#e60000";
+      }
+    } catch(err) {
+      resultEl.textContent = "Error pinging " + target;
+      resultEl.style.color = "#e60000";
+    }
+  }
+
+  // ── Main Refresh ──────────────────────────────────────────────────────────
+  async function refresh() {
+    try {
+      const [statsRes, logsRes, packetRes] = await Promise.all([
+        fetch("http://localhost:3000/api/stats"),
+        fetch("http://localhost:3000/api/logs"),
+        fetch("http://localhost:3000/api/packets")
+      ]);
+      const stats   = await statsRes.json();
+      const logs    = await logsRes.json();
+      const packets = await packetRes.json();
+
+      updateStats(stats);
+      updateFeed(logs);
+      updatePackets(packets);
+      updateICMP();
+    } catch(err) {
+      console.log("Waiting for server...");
+    }
+  }
+
+  // Load model comparison once on startup, refresh every 30 seconds
+  loadModelComparison();
+  setInterval(loadModelComparison, 30000);
+
+  // Live refresh every 2 seconds
+  refresh();
+  setInterval(refresh, 2000);
+</script>
+</body>
+</html>

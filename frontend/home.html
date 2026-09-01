@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DBIT Portal – Home</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      background: #f0f2f5;
+      font-family: 'Courier New', monospace;
+      color: #1c1e21;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background: #ffffff;
+      border-bottom: 1px solid #60677033;
+    }
+    .logo { color: #009900; font-size: 18px; font-weight: 700; letter-spacing: 2px; }
+    .user-info { font-size: 12px; color: #606770; }
+    .logout-btn {
+      padding: 8px 16px;
+      background: #e6000022;
+      border: 1px solid #e60000;
+      border-radius: 6px;
+      color: #e60000;
+      cursor: pointer;
+      font-size: 12px;
+      margin-left: 16px;
+    }
+    .container { padding: 32px; }
+    h2 { font-size: 16px; color: #606770; letter-spacing: 2px; margin-bottom: 24px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .action-card {
+      background: #ffffff;
+      border: 1px solid #60677033;
+      border-radius: 10px;
+      padding: 24px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-card:hover {
+      border-color: #009900;
+      box-shadow: 0 0 20px #00990022;
+    }
+    .action-card .icon { font-size: 32px; margin-bottom: 12px; }
+    .action-card h3 { font-size: 13px; color: #1c1e21; margin-bottom: 6px; }
+    .action-card p { font-size: 11px; color: #4a5080; }
+    #alertBox {
+      display: none;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+    .alert-normal  { background: #00990022; border: 1px solid #009900; color: #009900; }
+    .alert-anomaly { background: #e6000022; border: 1px solid #e60000; color: #e60000; }
+    #activityLog {
+      background: #ffffff;
+      border: 1px solid #60677033;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    #activityLog h3 { font-size: 13px; color: #606770; letter-spacing: 2px; margin-bottom: 16px; }
+    #frozenBanner {
+  display: none;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  background: #e68a0022;
+  border: 1px solid #e68a00;
+  color: #e68a00;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+    .log-entry {
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      font-size: 11px;
+      background: #f5f6f7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .risk-badge {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    #sessionTimer {
+      font-size: 11px;
+      color: #606770;
+      text-align: right;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🛡 DBIT PORTAL</div>
+  <div style="display:flex; align-items:center;">
+    <div class="user-info" id="userInfo">Welcome!</div>
+    <button class="logout-btn" onclick="doLogout()">LOGOUT</button>
+  </div>
+</header>
+
+<div class="container">
+  <div id="sessionTimer">⏱ Session expires in: <span id="timerDisplay">15:00</span></div>
+
+  <div id="alertBox"></div>
+  <div id="frozenBanner">
+  🔒 SESSION FROZEN — Suspicious activity detected!<br/>
+  <span style="font-size:11px;color:#1c1e21;">
+    Please check your email and click YES or NO to continue.<br/>
+    All actions are disabled until you respond.
+  </span>
+</div>
+
+  <h2>DUMMY WEB APPLICATION — ACTIONS</h2>
+
+  <div class="grid">
+    <div class="action-card" onclick="doAction('View Profile')">
+      <div class="icon">👤</div>
+      <h3>View Profile</h3>
+      <p>Access user profile data</p>
+    </div>
+    <div class="action-card" onclick="doAction('View Reports')">
+      <div class="icon">📊</div>
+      <h3>View Reports</h3>
+      <p>Access system reports</p>
+    </div>
+    <div class="action-card" onclick="doAction('Send Message')">
+      <div class="icon">✉️</div>
+      <h3>Send Message</h3>
+      <p>Send internal message</p>
+    </div>
+    <div class="action-card" onclick="doAction('Download Data')">
+      <div class="icon">📥</div>
+      <h3>Download Data</h3>
+      <p>Download system data</p>
+    </div>
+    <div class="action-card" onclick="doAction('Upload File')">
+      <div class="icon">📤</div>
+      <h3>Upload File</h3>
+      <p>Upload a file</p>
+    </div>
+    <div class="action-card" onclick="simulateAttack()">
+      <div class="icon">⚠️</div>
+      <h3>Simulate Attack</h3>
+      <p>Send rapid requests (demo)</p>
+    </div>
+  </div>
+
+  <div id="activityLog">
+    <h3>YOUR ACTIVITY LOG</h3>
+    <div id="logEntries">
+      <div class="log-entry" style="color:#4a5080;">No activity yet...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  if (!user.email) window.location.href = "/";
+  
+  let isFrozen = false;
+
+  // 🔄 Poll server every 5 seconds to check if session is unfrozen
+  const unFreezeChecker = setInterval(async () => {
+    if (!isFrozen) return;
+    try {
+      const res = await fetch("http://localhost:3000/api/session-status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: user.email })
+      });
+      const data = await res.json();
+      if (data.active && data.frozen === false) {
+        isFrozen = false;
+        document.getElementById("frozenBanner").style.display = "none";
+        document.querySelectorAll(".action-card").forEach(card => {
+          card.style.pointerEvents = "auto";
+          card.style.opacity = "1";
+        });
+        showAlertBox("✅ Session verified! You may continue.", "normal");
+      }
+    } catch (err) {}
+  }, 3000);
+
+  document.getElementById("userInfo").textContent =
+    `👤 ${user.name || user.email} (${user.role || "user"})`;
+
+  // Session timeout countdown
+  let timeLeft = 15 * 60;
+  const timerInterval = setInterval(() => {
+    timeLeft--;
+    const m = Math.floor(timeLeft / 60).toString().padStart(2, "0");
+    const s = (timeLeft % 60).toString().padStart(2, "0");
+    document.getElementById("timerDisplay").textContent = `${m}:${s}`;
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      alert("⏱ Session expired! Please login again.");
+      localStorage.removeItem("user");
+      window.location.href = "/";
+    }
+  }, 1000);
+
+  // Do a normal action
+  async function doAction(action) {
+    try {
+      const res = await fetch("http://localhost:3000/api/activity", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: user.email, action })
+      });
+      const data = await res.json();
+
+      if (!data.success && data.timeout) {
+        alert("⏱ Session timed out!");
+        localStorage.removeItem("user");
+        window.location.href = "/";
+        return;
+      }
+
+      // 🚫 Permanently Blocked
+      if (!data.success && data.permanent) {
+        isFrozen = true;
+        document.getElementById("frozenBanner").innerHTML = "🚫 PERMANENTLY BLOCKED — Repeated attacks detected! <br/><span style='font-size:11px;color:#1c1e21'>No email sent. Contact admin to restore access.</span>";
+        document.getElementById("frozenBanner").style.display = "block";
+        document.getElementById("frozenBanner").style.borderColor = "#e60000";
+        document.getElementById("frozenBanner").style.color = "#e60000";
+        document.getElementById("frozenBanner").style.background = "#e6000022";
+        document.querySelectorAll(".action-card").forEach(card => {
+          card.style.pointerEvents = "none";
+          card.style.opacity = "0.4";
+        });
+        showAlertBox(data.message, "anomaly");
+        addLogEntry(action, 100, "BLOCKED");
+        return;
+      }
+
+      // 🔒 Session frozen
+      if (!data.success && data.frozen) {
+        isFrozen = true;
+        document.getElementById("frozenBanner").style.display = "block";
+        document.querySelectorAll(".action-card").forEach(card => {
+          card.style.pointerEvents = "none";
+          card.style.opacity = "0.4";
+        });
+        return;
+      }
+
+      addLogEntry(action, data.risk_score || 0, data.aiResult || "NORMAL");
+      showAlert(data.aiResult || "NORMAL", data.risk_score || 0, data.alert || data.message || "");
+
+    } catch (err) {
+      console.error("Activity error:", err);
+    }
+  }
+
+  // Simulate rapid requests (attack demo)
+  async function simulateAttack() {
+    showAlertBox("⚠️ Simulating rapid requests — watch the dashboard!", "anomaly");
+    for (let i = 0; i < 15; i++) {
+      await doAction("Rapid Request #" + (i + 1));
+      await new Promise(r => setTimeout(r, 200));
+    }
+  }
+
+  // Logout
+  async function doLogout() {
+    await fetch("http://localhost:3000/api/logout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: user.email })
+    });
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  }
+
+  function addLogEntry(action, riskScore, aiResult) {
+    const logEntries = document.getElementById("logEntries");
+    const color = riskScore > 70 ? "#e60000" : riskScore > 40 ? "#e68a00" : "#009900";
+    const entry = document.createElement("div");
+    entry.className = "log-entry";
+    entry.innerHTML = `
+      <span>${new Date().toLocaleTimeString()} — ${action}</span>
+      <span class="risk-badge" style="background:${color}22;color:${color};border:1px solid ${color}">
+        Risk: ${riskScore}/100
+      </span>`;
+    if (logEntries.children[0].style.color === "rgb(74, 80, 128)") {
+      logEntries.innerHTML = "";
+    }
+    logEntries.prepend(entry);
+  }
+
+  function showAlert(aiResult, riskScore, alertMsg) {
+    if (aiResult === "ANOMALY") {
+      showAlertBox(`🚨 ANOMALY DETECTED! Risk Score: ${riskScore}/100 — ${alertMsg}`, "anomaly");
+    } else {
+      showAlertBox(`✅ Activity normal. Risk Score: ${riskScore}/100`, "normal");
+    }
+  }
+
+  function showAlertBox(msg, type) {
+    const box = document.getElementById("alertBox");
+    box.textContent = msg;
+    box.className = `alert-${type}`;
+    box.style.display = "block";
+    setTimeout(() => box.style.display = "none", 4000);
+  }
+</script>
+</body>
+</html>

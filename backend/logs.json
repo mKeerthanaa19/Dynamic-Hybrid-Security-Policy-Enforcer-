@@ -1,0 +1,5163 @@
+[
+  {
+    "event": "AUTO_BLOCK_NO_RESPONSE",
+    "user": "koushalya@dbit.com",
+    "result": "BLOCKED",
+    "reason": "No response within 5 minutes",
+    "policyLevel": "normal",
+    "timestamp": "2026-08-31T05:33:23.690Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "threat_label": "Suspected Brute Force Attack",
+    "timestamp": "2026-08-31T05:28:58.821Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "risk_level": "MEDIUM",
+    "threat_label": "Suspected Brute Force Attack",
+    "timestamp": "2026-08-31T05:28:58.815Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "risk_level": "MEDIUM",
+    "threat_label": "Suspected Brute Force Attack",
+    "timestamp": "2026-08-31T05:28:58.504Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "risk_level": "MEDIUM",
+    "threat_label": "Suspected Brute Force Attack",
+    "timestamp": "2026-08-31T05:28:58.189Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "risk_level": "MEDIUM",
+    "threat_label": "Failed Login Attempt",
+    "timestamp": "2026-08-31T05:28:57.878Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "risk_level": "MEDIUM",
+    "threat_label": "Failed Login Attempt",
+    "timestamp": "2026-08-31T05:28:57.566Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "koushalya@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 55,
+    "risk_level": "MEDIUM",
+    "threat_label": "Normal Activity",
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-31T05:28:23.673Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "risk_level": "MEDIUM",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:23.669Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:23.455Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:23.240Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:23.023Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:22.803Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:22.590Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:22.377Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:22.165Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:21.949Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:21.728Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "threat_label": "Normal Activity",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:21.517Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "koushalya@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "user",
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "threat_label": "Normal Login",
+    "shap_explanation": [],
+    "models": {},
+    "timestamp": "2026-08-31T05:28:21.505Z"
+  },
+  {
+    "event": "AUTO_BLOCK_NO_RESPONSE",
+    "user": "hacker@evil.com",
+    "result": "BLOCKED",
+    "reason": "No response within 5 minutes",
+    "policyLevel": "normal",
+    "timestamp": "2026-08-30T09:50:22.577Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "hacker@evil.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 55,
+    "risk_level": "MEDIUM",
+    "threat_label": "Low-Risk Anomaly",
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-30T09:45:22.586Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "risk_level": "MEDIUM",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 53.8,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0579,
+        "value": 11
+      },
+      {
+        "contribution": 42.5,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0458,
+        "value": 0
+      },
+      {
+        "contribution": 3.7,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0039,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:45:22.584Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 47.8,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0437,
+        "value": 0
+      },
+      {
+        "contribution": 47.7,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0436,
+        "value": 10
+      },
+      {
+        "contribution": 4.4,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0041,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:45:22.433Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 68.5,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0417,
+        "value": 0
+      },
+      {
+        "contribution": 26.7,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0162,
+        "value": 9
+      },
+      {
+        "contribution": 4.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0029,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:45:22.284Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 8
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:45:22.145Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 7
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:45:22.012Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 6
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:45:21.857Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 5
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:45:21.703Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 4
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:45:21.549Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 3
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:45:21.399Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 2
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:45:21.258Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "hacker@evil.com",
+    "action": "DoS Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 1
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:45:21.122Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "hacker@evil.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "user",
+    "risk_score": 20,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 47.8,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0437,
+        "value": 0
+      },
+      {
+        "contribution": 47.7,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0436,
+        "value": 10
+      },
+      {
+        "contribution": 4.4,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0041,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:45:21.089Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "koushalya@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 55,
+    "risk_level": "MEDIUM",
+    "threat_label": "Low-Risk Anomaly",
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-30T09:43:54.391Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "risk_level": "MEDIUM",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 53.8,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0579,
+        "value": 11
+      },
+      {
+        "contribution": 42.5,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0458,
+        "value": 0
+      },
+      {
+        "contribution": 3.7,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0039,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:43:54.389Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 47.8,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0437,
+        "value": 0
+      },
+      {
+        "contribution": 47.7,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0436,
+        "value": 10
+      },
+      {
+        "contribution": 4.4,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0041,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:43:54.122Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 68.5,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0417,
+        "value": 0
+      },
+      {
+        "contribution": 26.7,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0162,
+        "value": 9
+      },
+      {
+        "contribution": 4.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0029,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:43:53.861Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 8
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:43:53.591Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 7
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:43:53.331Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 6
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:43:53.068Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 5
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:43:52.805Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 4
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:43:52.566Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 3
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:43:52.305Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 2
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:43:52.043Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 60.3,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0343,
+        "value": 0
+      },
+      {
+        "contribution": 31.9,
+        "direction": "decreases",
+        "feature": "request_count",
+        "shap_value": -0.0181,
+        "value": 1
+      },
+      {
+        "contribution": 7.8,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0044,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "NORMAL",
+      "lof": "NORMAL",
+      "anomaly_votes": 0
+    },
+    "timestamp": "2026-08-30T09:43:51.796Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "koushalya@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "user",
+    "risk_score": 20,
+    "risk_level": "LOW",
+    "threat_label": "Low-Risk Anomaly",
+    "shap_explanation": [
+      {
+        "contribution": 47.8,
+        "direction": "increases",
+        "feature": "failed_attempts",
+        "shap_value": 0.0437,
+        "value": 0
+      },
+      {
+        "contribution": 47.7,
+        "direction": "increases",
+        "feature": "request_count",
+        "shap_value": 0.0436,
+        "value": 10
+      },
+      {
+        "contribution": 4.4,
+        "direction": "decreases",
+        "feature": "login_hour",
+        "shap_value": -0.0041,
+        "value": 15
+      }
+    ],
+    "models": {
+      "isolation_forest": "NORMAL",
+      "one_class_svm": "ANOMALY",
+      "lof": "NORMAL",
+      "anomaly_votes": 1
+    },
+    "timestamp": "2026-08-30T09:43:51.760Z"
+  },
+  {
+    "event": "AUTO_BLOCK_STRICT_POLICY",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Strict policy — no response within 2 minutes",
+    "policyLevel": "strict",
+    "timestamp": "2026-08-23T17:23:29.489Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #2 — level: strict",
+    "risk_score": 25,
+    "policyLevel": "strict",
+    "attackCount": 2,
+    "timestamp": "2026-08-23T17:21:29.486Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Reports",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T17:21:29.483Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-23T17:21:25.045Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 25,
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-23T17:21:04.701Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T17:21:04.698Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-23T17:21:02.089Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #3 — level: permanent",
+    "risk_score": 25,
+    "policyLevel": "permanent",
+    "attackCount": 3,
+    "timestamp": "2026-08-23T17:06:32.274Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Send Message",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T17:06:32.272Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-23T17:06:28.653Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #2 — level: strict",
+    "risk_score": 25,
+    "policyLevel": "strict",
+    "attackCount": 2,
+    "timestamp": "2026-08-23T17:06:03.789Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T17:06:03.786Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-23T17:06:00.369Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 25,
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-23T17:05:43.373Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T17:05:43.371Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-23T17:05:39.985Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-23T17:05:10.565Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "support@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-23T16:49:19.729Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "info@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-23T16:49:19.313Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "user@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-23T16:49:18.902Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "test@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-23T16:49:18.493Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "root@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-23T16:49:18.082Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "admin@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-23T16:49:17.674Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-23T16:48:59.235Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-23T16:48:59.227Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-23T16:48:58.915Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-23T16:48:58.602Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-23T16:48:58.292Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-23T16:48:57.979Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #3 — level: permanent",
+    "risk_score": 25,
+    "policyLevel": "permanent",
+    "attackCount": 3,
+    "timestamp": "2026-08-23T16:47:44.087Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Profile",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T16:47:44.085Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-23T16:47:37.221Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #2 — level: strict",
+    "risk_score": 25,
+    "policyLevel": "strict",
+    "attackCount": 2,
+    "timestamp": "2026-08-23T16:47:11.407Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T16:47:11.404Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-23T16:47:03.874Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 25,
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-23T16:46:39.538Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-23T16:46:39.534Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-23T16:46:36.570Z"
+  },
+  {
+    "event": "AUTO_BLOCK_NO_RESPONSE",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "No response within 5 minutes",
+    "policyLevel": "normal",
+    "timestamp": "2026-08-19T09:58:52.124Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 55,
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-19T09:49:28.948Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-19T09:49:28.946Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-19T09:49:28.714Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-19T09:49:28.474Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-19T09:49:28.226Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-19T09:49:27.982Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-19T09:49:27.742Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "timestamp": "2026-08-19T09:49:27.496Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "timestamp": "2026-08-19T09:49:27.249Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "timestamp": "2026-08-19T09:49:27.006Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "timestamp": "2026-08-19T09:49:26.778Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 24,
+    "timestamp": "2026-08-19T09:49:26.505Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 20,
+    "timestamp": "2026-08-19T09:49:21.434Z"
+  },
+  {
+    "event": "LOGIN_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Account locked after too many attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:48:49.968Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:47:09.057Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:47:09.049Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:47:04.234Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:46:25.870Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:46:23.302Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:46:15.823Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:23:30.845Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:23:28.961Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "support@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:20:16.735Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "info@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:20:16.325Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "info@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:20:16.313Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "user@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:20:15.900Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "test@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:20:15.488Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "root@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:20:15.076Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "admin@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:20:14.662Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:19:59.257Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:19:59.245Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:19:58.930Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:19:58.616Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:19:58.304Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:19:57.989Z"
+  },
+  {
+    "event": "ACCOUNT_UNLOCKED",
+    "user": "keerthana@dbit.com",
+    "result": "UNLOCKED",
+    "timestamp": "2026-08-19T09:17:28.687Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-19T09:17:16.338Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:17:16.323Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:17:10.153Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:15:54.690Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:15:53.534Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-19T09:15:50.360Z"
+  },
+  {
+    "event": "ACCOUNT_UNLOCKED",
+    "user": "keerthana@dbit.com",
+    "result": "UNLOCKED",
+    "timestamp": "2026-08-18T18:57:10.777Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-18T18:56:58.711Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:56:58.702Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:56:56.386Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:54:44.765Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:54:42.265Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:54:38.855Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-18T18:54:26.108Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #3 — level: permanent",
+    "risk_score": 55,
+    "policyLevel": "permanent",
+    "attackCount": 3,
+    "timestamp": "2026-08-18T18:53:09.224Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-18T18:53:09.221Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:53:08.970Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:53:08.725Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:53:08.481Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:53:08.234Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:53:07.990Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:53:07.766Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:53:07.523Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:53:07.278Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:53:07.036Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:53:06.800Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-18T18:52:55.369Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #2 — level: strict",
+    "risk_score": 55,
+    "policyLevel": "strict",
+    "attackCount": 2,
+    "timestamp": "2026-08-18T18:52:36.587Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-18T18:52:36.585Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:36.341Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:36.100Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:35.876Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:35.631Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:35.386Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:35.141Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:34.907Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:34.655Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:34.409Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:34.163Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-18T18:52:23.565Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 55,
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-18T18:52:13.030Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-18T18:52:13.027Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:12.781Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:12.554Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:12.308Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:12.061Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-18T18:52:11.816Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:11.570Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:11.323Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:11.081Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Upload File",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:08.101Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Profile",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-18T18:52:05.853Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 18,
+    "timestamp": "2026-08-18T18:51:59.756Z"
+  },
+  {
+    "event": "LOGIN_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Account locked after too many attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-18T18:51:31.581Z"
+  },
+  {
+    "event": "ACCOUNT_KEPT_BLOCKED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-18T18:49:25.394Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-18T18:48:54.291Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:48:54.276Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:48:53.960Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:48:53.646Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:48:53.334Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:48:53.019Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:44:00.605Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:43:56.116Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:43:22.440Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:42:05.543Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-18T18:42:01.857Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "support@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-14T07:29:12.392Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "info@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-14T07:29:11.981Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "info@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:29:11.971Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "user@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:29:11.560Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "test@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:29:11.148Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "root@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:29:10.735Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "admin@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:29:10.323Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-14T07:28:24.905Z"
+  },
+  {
+    "event": "POLICY_ENFORCED",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "Dynamic policy applied — attack #1 — level: normal",
+    "risk_score": 55,
+    "policyLevel": "normal",
+    "attackCount": 1,
+    "timestamp": "2026-08-14T07:26:58.821Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-14T07:26:58.819Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-14T07:26:58.573Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-14T07:26:58.325Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-14T07:26:58.098Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-14T07:26:57.853Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-14T07:26:57.609Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-14T07:26:57.364Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-14T07:26:57.128Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-14T07:26:56.885Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-14T07:26:56.639Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-14T07:26:56.374Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 18,
+    "timestamp": "2026-08-14T07:26:53.349Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-14T07:25:36.025Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:25:36.017Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:25:32.859Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:24:53.306Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:24:52.138Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:24:49.827Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-14T07:23:39.712Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:23:39.702Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:23:39.392Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:23:39.079Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:23:38.767Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-14T07:23:38.454Z"
+  },
+  {
+    "event": "ACCOUNT_UNLOCKED",
+    "user": "sudhsjhf",
+    "result": "UNLOCKED",
+    "timestamp": "2026-08-05T05:31:38.111Z"
+  },
+  {
+    "event": "ACCOUNT_UNLOCKED",
+    "user": "sudhsjhf",
+    "result": "UNLOCKED",
+    "timestamp": "2026-08-05T05:31:23.134Z"
+  },
+  {
+    "event": "ACCOUNT_LOCKED",
+    "user": "sudhsjhf",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "risk_score": 100,
+    "timestamp": "2026-08-05T05:30:31.963Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "sudhsjhf",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-05T05:30:31.961Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "sudhsjhf",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-05T05:30:27.902Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "sudhsjhf",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-05T05:29:39.692Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "sudhsjhf",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-05T05:29:37.254Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "sudhsjhf",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-05T05:29:34.863Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-05T05:29:30.522Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-05T05:28:55.471Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-05T05:27:01.167Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-05T05:27:00.924Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-05T05:27:00.680Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-05T05:27:00.433Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-05T05:27:00.198Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 30,
+    "timestamp": "2026-08-05T05:26:59.953Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-05T05:26:59.708Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-05T05:26:59.464Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-05T05:26:59.219Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-05T05:26:58.980Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-05T05:26:58.723Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 17,
+    "timestamp": "2026-08-05T05:26:41.104Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-04T08:34:22.901Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-04T08:34:13.562Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-04T08:34:07.998Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-04T08:33:27.655Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-04T08:33:20.763Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-04T08:33:11.168Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-04T08:32:59.090Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Reports",
+    "requestCount": 12,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-04T08:31:33.475Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-04T08:31:30.773Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-04T08:29:14.352Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 19,
+    "timestamp": "2026-08-04T08:29:14.109Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-04T08:29:13.865Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:13.626Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:13.381Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:13.136Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:12.890Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:12.667Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:12.422Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:12.182Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:29:11.936Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 19,
+    "timestamp": "2026-08-04T08:28:09.001Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-04T08:25:55.068Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-04T08:23:03.586Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-04T08:22:30.888Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 19,
+    "timestamp": "2026-08-04T08:22:30.648Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-04T08:22:30.404Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:30.160Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:29.918Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:29.677Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:29.453Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:29.206Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:28.961Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:28.717Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:22:28.477Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 19,
+    "timestamp": "2026-08-04T08:22:24.320Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-04T08:22:14.594Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-04T08:21:17.254Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 19,
+    "timestamp": "2026-08-04T08:21:17.009Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-04T08:21:12.593Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:12.410Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:12.258Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:12.096Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:11.963Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:11.810Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Profile",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:10.230Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Profile",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:10.082Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Reports",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 23,
+    "timestamp": "2026-08-04T08:21:08.332Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 19,
+    "timestamp": "2026-08-04T08:21:05.614Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-04T08:14:17.163Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-04T07:24:26.233Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-04T07:23:28.449Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-04T07:23:28.446Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:28.192Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 20,
+    "timestamp": "2026-08-04T07:23:28.186Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:27.937Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:27.932Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:27.693Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:27.677Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:27.471Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:27.448Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:23:27.246Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 18,
+    "timestamp": "2026-08-04T07:23:22.364Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-04T07:23:09.948Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-04T07:23:00.933Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-04T07:20:18.704Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 18,
+    "timestamp": "2026-08-04T07:20:18.463Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 20,
+    "timestamp": "2026-08-04T07:20:18.217Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:17.974Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:17.728Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:17.499Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:17.255Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:17.007Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:16.763Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:16.535Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 22,
+    "timestamp": "2026-08-04T07:20:16.262Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 18,
+    "timestamp": "2026-08-04T07:19:55.063Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-03T14:44:08.940Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-03T14:43:58.165Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-03T14:43:57.855Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-03T14:43:57.543Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-03T14:43:57.233Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-03T14:43:56.918Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-03T13:41:19.012Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 4,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-03T13:41:03.084Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 4,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-03T13:41:03.055Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 4,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-03T13:40:59.935Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 4,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-03T13:40:59.815Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-03T13:40:53.080Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-03T13:40:06.769Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-03T13:39:11.528Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 2,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-02T17:15:18.125Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-02T17:15:09.207Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-02T17:14:52.207Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-02T17:14:45.091Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-02T17:14:26.986Z"
+  },
+  {
+    "event": "AUTO_BLOCK_NO_RESPONSE",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "reason": "User did not respond to email alert within 5 minutes",
+    "timestamp": "2026-08-02T16:06:35.362Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Upload File",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-02T16:03:35.281Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-02T16:03:10.103Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-02T16:02:57.985Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "ANOMALY",
+    "risk_score": 25,
+    "timestamp": "2026-08-02T16:01:35.345Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-02T15:59:46.291Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T20:11:03.670Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-01T20:10:16.645Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-01T20:10:10.201Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-01T20:09:37.143Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T20:09:27.282Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 18,
+    "timestamp": "2026-08-01T20:09:27.033Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 19,
+    "timestamp": "2026-08-01T20:09:26.781Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:26.531Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:26.282Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:26.051Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:25.807Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:25.559Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:25.310Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:25.075Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Upload File",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T20:09:16.715Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 18,
+    "timestamp": "2026-08-01T20:09:14.072Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T20:01:55.425Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-01T20:00:53.722Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-01T20:00:20.496Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-01T19:59:49.601Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T19:59:26.672Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 18,
+    "timestamp": "2026-08-01T19:59:26.432Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 19,
+    "timestamp": "2026-08-01T19:59:26.186Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:25.940Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:25.688Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:25.440Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:25.189Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:24.939Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:24.689Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Profile",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:15.810Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "View Reports",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 21,
+    "timestamp": "2026-08-01T19:59:09.830Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 18,
+    "timestamp": "2026-08-01T19:59:04.892Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T19:58:49.436Z"
+  },
+  {
+    "event": "SESSION_CONFIRMED",
+    "user": "keerthana@dbit.com",
+    "result": "CONFIRMED",
+    "timestamp": "2026-08-01T17:58:39.565Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #15",
+    "requestCount": 18,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T17:56:40.167Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #14",
+    "requestCount": 17,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T17:56:39.958Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #13",
+    "requestCount": 16,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T17:56:39.748Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #12",
+    "requestCount": 15,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T17:56:39.536Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 14,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T17:56:39.326Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 13,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T17:56:39.117Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 12,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T17:56:38.909Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T17:56:38.685Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:38.476Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:38.266Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:38.059Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:37.848Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:37.635Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:37.423Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:37.213Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Download Data",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:34.710Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Upload File",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:30.661Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Send Message",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T17:56:23.930Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T17:56:20.253Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T17:56:03.508Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "support@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-01T14:09:23.673Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "info@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:09:16.337Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "user@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:09:15.927Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "test@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:09:15.517Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "root@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:09:15.107Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "admin@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:09:14.694Z"
+  },
+  {
+    "event": "LOGIN_BLOCKED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "BLOCKED",
+    "reason": "Too many failed attempts",
+    "risk_score": 100,
+    "timestamp": "2026-08-01T14:08:50.517Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 5,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:08:42.076Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 4,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:08:41.765Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 3,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:08:41.455Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 2,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:08:41.144Z"
+  },
+  {
+    "event": "LOGIN_FAILED",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "FAILED",
+    "failCount": 1,
+    "risk_score": 50,
+    "timestamp": "2026-08-01T14:08:40.828Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "koushalya@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-01T14:08:16.050Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #20",
+    "requestCount": 20,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T14:07:33.529Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #19",
+    "requestCount": 19,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T14:07:33.319Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #18",
+    "requestCount": 18,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T14:07:33.111Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #17",
+    "requestCount": 17,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T14:07:32.904Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #16",
+    "requestCount": 16,
+    "result": "NORMAL",
+    "risk_score": 70,
+    "timestamp": "2026-08-01T14:07:32.695Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #15",
+    "requestCount": 15,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:07:32.488Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #14",
+    "requestCount": 14,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:07:32.276Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #13",
+    "requestCount": 13,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:07:32.067Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #12",
+    "requestCount": 12,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:07:31.858Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:07:31.642Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:31.434Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:31.223Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:31.013Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:30.799Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:30.590Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:30.378Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:30.166Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:29.951Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:29.739Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "koushalya@dbit.com",
+    "action": "Bot Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:07:29.533Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "koushalya@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "user",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T14:07:29.527Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-01T14:06:29.498Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #15",
+    "requestCount": 15,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:05:54.072Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #14",
+    "requestCount": 14,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:05:53.861Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #13",
+    "requestCount": 13,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:05:53.651Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #12",
+    "requestCount": 12,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:05:53.440Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 55,
+    "timestamp": "2026-08-01T14:05:53.216Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:53.003Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:52.791Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:52.582Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:52.374Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:52.163Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:51.951Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:51.740Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:51.532Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:51.324Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T14:05:51.087Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T14:05:48.088Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T14:05:31.252Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T14:01:59.705Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T13:04:43.750Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T13:03:41.159Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T12:54:50.728Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T12:54:39.359Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #15",
+    "requestCount": 15,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:07.490Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #14",
+    "requestCount": 14,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:07.281Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #13",
+    "requestCount": 13,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:07.073Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #12",
+    "requestCount": 12,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:06.866Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:06.646Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:06.436Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:06.226Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:06.015Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:05.805Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:05.592Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:05.381Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:05.170Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:04.958Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:04.749Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:51:04.541Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T12:51:02.008Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T12:50:46.650Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-01T12:49:07.243Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #15",
+    "requestCount": 15,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:25.682Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #14",
+    "requestCount": 14,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:25.474Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #13",
+    "requestCount": 13,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:25.267Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #12",
+    "requestCount": 12,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:25.056Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:24.834Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:24.622Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:24.411Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:24.201Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:23.992Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #6",
+    "requestCount": 6,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:23.782Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #5",
+    "requestCount": 5,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:23.568Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #4",
+    "requestCount": 4,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:23.354Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #3",
+    "requestCount": 3,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:23.142Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #2",
+    "requestCount": 2,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:22.930Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #1",
+    "requestCount": 1,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:47:22.722Z"
+  },
+  {
+    "event": "LOGIN_SUCCESS",
+    "user": "keerthana@dbit.com",
+    "ip": "::1",
+    "result": "ALLOWED",
+    "role": "admin",
+    "risk_score": 22,
+    "timestamp": "2026-08-01T12:47:19.458Z"
+  },
+  {
+    "event": "LOGOUT",
+    "user": "keerthana@dbit.com",
+    "result": "LOGGED_OUT",
+    "timestamp": "2026-08-01T12:47:05.747Z"
+  },
+  {
+    "event": "SESSION_BLOCKED_BY_USER",
+    "user": "keerthana@dbit.com",
+    "result": "BLOCKED",
+    "timestamp": "2026-08-01T12:42:05.260Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #15",
+    "requestCount": 15,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:36.380Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #14",
+    "requestCount": 14,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:36.169Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #13",
+    "requestCount": 13,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:35.959Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #12",
+    "requestCount": 12,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:35.751Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #11",
+    "requestCount": 11,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:35.524Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #10",
+    "requestCount": 10,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:35.313Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #9",
+    "requestCount": 9,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:35.100Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #8",
+    "requestCount": 8,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:34.893Z"
+  },
+  {
+    "event": "ACTIVITY",
+    "user": "keerthana@dbit.com",
+    "action": "Rapid Request #7",
+    "requestCount": 7,
+    "result": "NORMAL",
+    "risk_score": 0,
+    "timestamp": "2026-08-01T12:41:34.683Z"
+  }
+]

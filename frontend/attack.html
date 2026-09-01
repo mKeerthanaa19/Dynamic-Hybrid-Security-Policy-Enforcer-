@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attack Simulator</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      background: #f0f2f5;
+      font-family: 'Courier New', monospace;
+      color: #1c1e21;
+      padding: 30px;
+    }
+    h1 { color: #e60000; letter-spacing: 3px; font-size: 20px; margin-bottom: 6px; }
+    .subtitle { color: #606770; font-size: 11px; letter-spacing: 2px; margin-bottom: 30px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .card { background: #ffffff; border-radius: 10px; padding: 20px; }
+    .card h3 { font-size: 11px; color: #606770; letter-spacing: 2px; margin-bottom: 16px; }
+    .attack-btn {
+      width: 100%; padding: 14px; border: none; border-radius: 8px;
+      font-family: 'Courier New', monospace; font-size: 13px;
+      font-weight: 700; letter-spacing: 2px; cursor: pointer;
+      margin-bottom: 10px; transition: opacity 0.2s;
+    }
+    .attack-btn:hover { opacity: 0.85; }
+    .btn-red    { background: #e60000; color: #fff; }
+    .btn-orange { background: #e68a00; color: #fff; }
+    .btn-purple { background: #606770; color: #fff; }
+    .btn-blue   { background: #0066cc; color: #fff; }
+    .btn-stop   { background: #f5f6f7; color: #e60000; border: 1px solid #e60000; }
+    .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+    .stat { background: #ffffff; border-radius: 8px; padding: 14px; text-align: center; }
+    .stat .label { font-size: 9px; color: #606770; letter-spacing: 2px; margin-bottom: 6px; }
+    .stat .value { font-size: 28px; font-weight: 700; }
+    .log-box { background: #ffffff; border-radius: 10px; padding: 20px; height: 320px; overflow-y: auto; }
+    .log-box h3 { font-size: 11px; color: #606770; letter-spacing: 2px; margin-bottom: 14px; }
+    .log-entry {
+      font-size: 11px; padding: 6px 10px; border-radius: 4px;
+      margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .log-normal  { background: #00990011; color: #009900; }
+    .log-failed  { background: #e6000011; color: #e60000; }
+    .log-blocked { background: #e6000011; color: #e60000; border: 1px solid #e6000033; }
+    .log-anomaly { background: #e68a0011; color: #e68a00; }
+    .log-frozen  { background: #60677022; color: #606770; border: 1px solid #60677044; }
+    .log-dos     { background: #0066cc11; color: #0066cc; border: 1px solid #0066cc33; }
+    .progress-wrap { height: 6px; background: #f5f6f7; border-radius: 3px; margin: 10px 0; overflow: hidden; }
+    .progress-bar { height: 100%; border-radius: 3px; background: #e60000; transition: width 0.3s ease; width: 0%; }
+    .status-text { font-size: 11px; color: #606770; margin-bottom: 10px; min-height: 16px; }
+    .nav { display: flex; gap: 16px; margin-bottom: 24px; font-size: 11px; }
+    .nav a {
+      color: #606770; text-decoration: none;
+      padding: 6px 12px; border: 1px solid #60677033; border-radius: 4px;
+    }
+    .nav a:hover { border-color: #606770; }
+    .nav a.active { color: #e60000; border-color: #e6000033; }
+
+    /* Frozen warning banner */
+    #frozenBanner {
+      display: none; padding: 16px; border-radius: 8px;
+      margin-bottom: 20px; font-size: 13px;
+      background: #e68a0022; border: 1px solid #e68a00;
+      color: #e68a00; text-align: center;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* DoS warning banner */
+    #dosBanner {
+      display: none; padding: 16px; border-radius: 8px;
+      margin-bottom: 20px; font-size: 13px;
+      background: #0066cc22; border: 1px solid #0066cc;
+      color: #0066cc; text-align: center;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+
+    /* DoS rate meter */
+    .dos-meter {
+      background: #f5f6f7; border-radius: 8px;
+      padding: 14px; margin-top: 12px;
+    }
+    .dos-meter .meter-label {
+      font-size: 10px; color: #606770;
+      letter-spacing: 2px; margin-bottom: 8px;
+    }
+    .dos-meter-track {
+      height: 10px; background: #ccd0d5;
+      border-radius: 5px; overflow: hidden;
+    }
+    .dos-meter-fill {
+      height: 100%; border-radius: 5px;
+      background: #0066cc; transition: width 0.2s;
+      width: 0%;
+    }
+    .dos-rate {
+      font-size: 18px; font-weight: 700;
+      color: #0066cc; margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>⚡ ATTACK SIMULATOR</h1>
+<div class="subtitle">HYBRID DYNAMIC SECURITY ENFORCER — DEMO MODE</div>
+
+<div class="nav">
+  <a href="/">← Login Page</a>
+  <a href="/dashboard.html">Dashboard</a>
+  <a href="/attack.html" class="active">Attack Simulator</a>
+</div>
+
+<!-- Frozen banner -->
+<div id="frozenBanner">
+  🔒 SESSION FROZEN — Email verification sent!<br/>
+  <span style="font-size:11px;color:#1c1e21;">
+    Check email and click YES/NO to continue. Bot attack blocked! ✅
+  </span>
+</div>
+
+<!-- DoS banner -->
+<div id="dosBanner">
+  🌊 DoS ATTACK DETECTED — Rapid request flood identified!<br/>
+  <span style="font-size:11px;color:#1c1e21;">
+    AI detected abnormal traffic volume. Rate limiting triggered! ✅
+  </span>
+</div>
+
+<!-- Stats -->
+<div class="stat-row">
+  <div class="stat" style="border:1px solid #e6000033">
+    <div class="label">ATTEMPTS</div>
+    <div class="value" id="attempts" style="color:#e60000">0</div>
+  </div>
+  <div class="stat" style="border:1px solid #e6000033">
+    <div class="label">BLOCKED</div>
+    <div class="value" id="blocked" style="color:#e60000">0</div>
+  </div>
+  <div class="stat" style="border:1px solid #e68a0033">
+    <div class="label">ANOMALIES</div>
+    <div class="value" id="anomalies" style="color:#e68a00">0</div>
+  </div>
+  <div class="stat" style="border:1px solid #00990033">
+    <div class="label">SUCCESS</div>
+    <div class="value" id="success" style="color:#009900">0</div>
+  </div>
+</div>
+
+<div class="grid">
+  <!-- Attack controls -->
+  <div class="card">
+    <h3>ATTACK CONTROLS</h3>
+
+    <button class="attack-btn btn-red" onclick="startBruteForce()">
+      🔴 BRUTE FORCE ATTACK
+    </button>
+    <p style="font-size:10px;color:#4a5080;margin-bottom:14px;">
+      Sends rapid login attempts with wrong passwords
+    </p>
+
+    <button class="attack-btn btn-orange" onclick="startCredentialStuffing()">
+      🟠 CREDENTIAL STUFFING
+    </button>
+    <p style="font-size:10px;color:#4a5080;margin-bottom:14px;">
+      Tries multiple username/password combinations
+    </p>
+
+    <button class="attack-btn btn-purple" onclick="startBotActivity()">
+      🟣 BOT ACTIVITY SIMULATION
+    </button>
+    <p style="font-size:10px;color:#4a5080;margin-bottom:14px;">
+      Simulates bot sending rapid requests after login
+    </p>
+
+    <button class="attack-btn btn-blue" onclick="startDoS()">
+      🔵 DoS ATTACK SIMULATION
+    </button>
+    <p style="font-size:10px;color:#4a5080;margin-bottom:14px;">
+      Floods server with rapid requests to simulate Denial of Service
+    </p>
+
+    <button class="attack-btn btn-stop" onclick="stopAttack()">
+      ⏹ STOP ATTACK
+    </button>
+
+    <div class="status-text" id="statusText">Ready to simulate attack...</div>
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- DoS Rate Meter (shown only during DoS) -->
+    <div class="dos-meter" id="dosMeter" style="display:none;">
+      <div class="meter-label">REQUEST FLOOD RATE</div>
+      <div class="dos-meter-track">
+        <div class="dos-meter-fill" id="dosRateFill"></div>
+      </div>
+      <div class="dos-rate" id="dosRateText">0 req/sec</div>
+    </div>
+  </div>
+
+  <!-- Attack info -->
+  <div class="card">
+    <h3>HOW EACH ATTACK WORKS</h3>
+    <div style="font-size:11px;color:#606770;line-height:2;">
+      <p style="color:#e60000;margin-bottom:6px;">🔴 Brute Force:</p>
+      <p style="color:#4a5080;margin-bottom:14px;">
+        Bot tries same username with many different passwords rapidly.
+        Rule-based system blocks after 5 attempts.
+      </p>
+      <p style="color:#e68a00;margin-bottom:6px;">🟠 Credential Stuffing:</p>
+      <p style="color:#4a5080;margin-bottom:14px;">
+        Bot tries different usernames and passwords from leaked databases.
+        AI detects unusual pattern of attempts.
+      </p>
+      <p style="color:#606770;margin-bottom:6px;">🟣 Bot Activity:</p>
+      <p style="color:#4a5080;margin-bottom:14px;">
+        Bot logs in successfully then sends hundreds of requests.
+        AI detects abnormal request frequency, freezes session,
+        and sends email alert for verification.
+      </p>
+      <p style="color:#0066cc;margin-bottom:6px;">🔵 DoS Attack:</p>
+      <p style="color:#4a5080;">
+        Simulates a Denial of Service attack by flooding the server
+        with rapid repeated requests. AI detects the abnormal traffic
+        volume through high request_count feature and flags it as
+        a critical anomaly. Rate limiting is triggered automatically.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Attack log -->
+<div class="log-box">
+  <h3>⚡ LIVE ATTACK LOG</h3>
+  <div id="logEntries">
+    <div style="color:#4a5080;font-size:11px;">
+      Press an attack button to start simulation...
+    </div>
+  </div>
+</div>
+
+<script>
+  var stats     = { attempts: 0, blocked: 0, anomalies: 0, success: 0 };
+  var attacking = false;
+  var dosRequestCount = 0;
+  var dosStartTime    = null;
+
+  var fakeUsers = [
+    "admin@dbit.com", "root@dbit.com", "test@dbit.com",
+    "user@dbit.com", "info@dbit.com", "support@dbit.com"
+  ];
+  var fakePasswords = [
+    "123456", "password", "admin123", "letmein",
+    "qwerty", "abc123", "monkey", "master"
+  ];
+
+  function updateStats() {
+    document.getElementById("attempts").textContent  = stats.attempts;
+    document.getElementById("blocked").textContent   = stats.blocked;
+    document.getElementById("anomalies").textContent = stats.anomalies;
+    document.getElementById("success").textContent   = stats.success;
+  }
+
+  function addLog(message, type) {
+    var container = document.getElementById("logEntries");
+    if (container.children[0] &&
+        container.children[0].style.color === "rgb(74, 80, 128)") {
+      container.innerHTML = "";
+    }
+    var entry     = document.createElement("div");
+    entry.className = "log-entry log-" + type;
+    var time = new Date().toLocaleTimeString("en-US", {
+      hour: "2-digit", minute: "2-digit", second: "2-digit"
+    });
+    entry.innerHTML = "<span>" + time + " — " + message + "</span>";
+    container.insertBefore(entry, container.firstChild);
+  }
+
+  function setStatus(text, progress) {
+    document.getElementById("statusText").textContent        = text;
+    document.getElementById("progressBar").style.width       = progress + "%";
+  }
+
+  function hideBanners() {
+    document.getElementById("frozenBanner").style.display = "none";
+    document.getElementById("dosBanner").style.display    = "none";
+    document.getElementById("dosMeter").style.display     = "none";
+  }
+
+  function stopAttack() {
+    attacking = false;
+    setStatus("Attack stopped!", 0);
+    addLog("Attack simulation stopped by user", "anomaly");
+    document.getElementById("dosMeter").style.display = "none";
+  }
+
+  function updateDosMeter(reqCount) {
+    const elapsed  = (Date.now() - dosStartTime) / 1000 || 1;
+    const rate     = Math.round(reqCount / elapsed);
+    const fillPct  = Math.min(100, (rate / 50) * 100);
+    document.getElementById("dosRateFill").style.width = fillPct + "%";
+    document.getElementById("dosRateText").textContent = rate + " req/sec";
+
+    // Color changes as rate increases
+    const fill = document.getElementById("dosRateFill");
+    if (rate > 30)      fill.style.background = "#e60000";
+    else if (rate > 15) fill.style.background = "#e68a00";
+    else                fill.style.background = "#0066cc";
+  }
+
+  // ── Attack 1: Brute Force ─────────────────────────────────────────────────
+  async function startBruteForce() {
+    if (attacking) return;
+    attacking = true;
+    stats     = { attempts: 0, blocked: 0, anomalies: 0, success: 0 };
+    updateStats();
+    hideBanners();
+    addLog("🔴 BRUTE FORCE ATTACK STARTED", "failed");
+    setStatus("Running brute force attack...", 0);
+
+    var total = 20;
+    for (var i = 0; i < total; i++) {
+      if (!attacking) break;
+
+      var fakePass = fakePasswords[i % fakePasswords.length];
+      stats.attempts++;
+      updateStats();
+      setStatus("Trying password: " + fakePass + "...", (i / total) * 100);
+
+      try {
+        var res  = await fetch("http://localhost:3000/api/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: "keerthana@dbit.com", password: fakePass })
+        });
+        var data = await res.json();
+
+        if (data.success) {
+          stats.success++;
+          addLog("✓ Login SUCCESS with: " + fakePass, "normal");
+
+        } else if (data.locked) {
+          stats.blocked++;
+          addLog("🔒 ACCOUNT LOCKED — Email sent to user!", "blocked");
+          setStatus("Account locked! Email verification required.", 100);
+          break;
+
+        } else if (res.status === 429 || (data.message && data.message.includes("Blocked"))) {
+          stats.blocked++;
+          addLog("⛔ IP BLOCKED after " + stats.attempts + " attempts!", "blocked");
+          setStatus("IP BLOCKED by rule-based system!", 100);
+          break;
+
+        } else {
+          if (data.risk_score && data.risk_score > 50) stats.anomalies++;
+          addLog("✗ Failed attempt #" + stats.attempts + " — " + fakePass +
+                 " (Risk: " + (data.risk_score || 0) + "/100" +
+                 (data.threat_label ? " | " + data.threat_label : "") + ")", "failed");
+        }
+
+      } catch(err) {
+        addLog("✗ Request failed", "failed");
+      }
+
+      updateStats();
+      await new Promise(r => setTimeout(r, 300));
+    }
+
+    attacking = false;
+    setStatus("Brute force simulation complete!", 100);
+    addLog("🔴 BRUTE FORCE COMPLETE — Check dashboard!", "blocked");
+  }
+
+  // ── Attack 2: Credential Stuffing ─────────────────────────────────────────
+  async function startCredentialStuffing() {
+    if (attacking) return;
+    attacking = true;
+    stats     = { attempts: 0, blocked: 0, anomalies: 0, success: 0 };
+    updateStats();
+    hideBanners();
+    addLog("🟠 CREDENTIAL STUFFING ATTACK STARTED", "anomaly");
+    setStatus("Running credential stuffing...", 0);
+
+    var total = fakeUsers.length;
+    for (var i = 0; i < total; i++) {
+      if (!attacking) break;
+
+      var fakeUser = fakeUsers[i];
+      var fakePass = fakePasswords[i % fakePasswords.length];
+      stats.attempts++;
+      updateStats();
+      setStatus("Trying: " + fakeUser + " / " + fakePass, (i / total) * 100);
+
+      try {
+        var res  = await fetch("http://localhost:3000/api/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: fakeUser, password: fakePass })
+        });
+        var data = await res.json();
+
+        if (data.success) {
+          stats.success++;
+          addLog("✓ CREDENTIALS FOUND: " + fakeUser, "normal");
+        } else if (data.locked || res.status === 429) {
+          stats.blocked++;
+          addLog("⛔ BLOCKED — " + fakeUser, "blocked");
+        } else {
+          if (data.risk_score && data.risk_score > 50) stats.anomalies++;
+          addLog("✗ Invalid: " + fakeUser + " / " + fakePass +
+                 " (Risk: " + (data.risk_score || 0) + "/100" +
+                 (data.threat_label ? " | " + data.threat_label : "") + ")", "failed");
+        }
+
+      } catch(err) {
+        addLog("✗ Request failed", "failed");
+      }
+
+      updateStats();
+      await new Promise(r => setTimeout(r, 400));
+    }
+
+    attacking = false;
+    setStatus("Credential stuffing complete!", 100);
+    addLog("🟠 CREDENTIAL STUFFING COMPLETE — Check dashboard!", "anomaly");
+  }
+
+  // ── Attack 3: Bot Activity ────────────────────────────────────────────────
+  async function startBotActivity() {
+    if (attacking) return;
+    attacking = true;
+    stats     = { attempts: 0, blocked: 0, anomalies: 0, success: 0 };
+    updateStats();
+    hideBanners();
+    addLog("🟣 BOT ACTIVITY SIMULATION STARTED", "anomaly");
+    setStatus("Logging in as bot...", 0);
+
+    try {
+      var loginRes  = await fetch("http://localhost:3000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: "koushalya@dbit.com", password: "kous456" })
+      });
+      var loginData = await loginRes.json();
+
+      if (!loginData.success) {
+        addLog("✗ Could not login for bot simulation — try again", "failed");
+        attacking = false;
+        return;
+      }
+
+      addLog("✓ Bot logged in as koushalya@dbit.com", "normal");
+      setStatus("Bot sending rapid requests...", 10);
+
+      var total = 20;
+      for (var i = 0; i < total; i++) {
+        if (!attacking) break;
+
+        stats.attempts++;
+        setStatus("Bot request #" + stats.attempts + " sending...", 10 + (i / total) * 90);
+
+        var actRes  = await fetch("http://localhost:3000/api/activity", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email:  "koushalya@dbit.com",
+            action: "Bot Request #" + stats.attempts
+          })
+        });
+        var actData = await actRes.json();
+
+        if (!actData.success && actData.frozen) {
+          stats.blocked++;
+          updateStats();
+          document.getElementById("frozenBanner").style.display = "block";
+          addLog("🔒 SESSION FROZEN! Email sent for verification. Bot stopped!", "frozen");
+          setStatus("Session frozen — waiting for email response!", 100);
+          attacking = false;
+          break;
+        }
+
+        if (actData.aiResult === "ANOMALY") {
+          stats.anomalies++;
+          addLog("🚨 ANOMALY DETECTED! Risk: " + actData.risk_score +
+                 "/100 | " + (actData.threat_label || ""), "anomaly");
+        } else {
+          addLog("→ Bot request #" + stats.attempts +
+                 " (Risk: " + (actData.risk_score || 0) + "/100)", "failed");
+        }
+
+        updateStats();
+        await new Promise(r => setTimeout(r, 200));
+      }
+
+    } catch(err) {
+      addLog("✗ Bot simulation error: " + err.message, "failed");
+    }
+
+    if (attacking) {
+      attacking = false;
+      setStatus("Bot simulation complete!", 100);
+      addLog("🟣 BOT ACTIVITY COMPLETE — Check dashboard!", "anomaly");
+    }
+  }
+
+  // ── Attack 4: DoS Simulation ──────────────────────────────────────────────
+  async function startDoS() {
+    if (attacking) return;
+    attacking       = true;
+    dosRequestCount = 0;
+    dosStartTime    = Date.now();
+    stats           = { attempts: 0, blocked: 0, anomalies: 0, success: 0 };
+    updateStats();
+    hideBanners();
+
+    // Show DoS meter
+    document.getElementById("dosMeter").style.display = "block";
+    document.getElementById("progressBar").style.background = "#0066cc";
+
+    addLog("🔵 DoS ATTACK SIMULATION STARTED", "dos");
+    setStatus("Flooding server with rapid requests...", 0);
+
+    // First — login as hacker to get a valid session
+    try {
+      var loginRes  = await fetch("http://localhost:3000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: "hacker@evil.com", password: "hack789" })
+      });
+      var loginData = await loginRes.json();
+
+      if (!loginData.success) {
+        addLog("✗ Could not login for DoS simulation — try again", "failed");
+        attacking = false;
+        document.getElementById("dosMeter").style.display = "none";
+        return;
+      }
+
+      addLog("✓ Attacker logged in as hacker@evil.com", "dos");
+      addLog("🌊 Beginning request flood...", "dos");
+
+      var total        = 50;   // 50 rapid requests = DoS simulation
+      var dosDetected  = false;
+
+      for (var i = 0; i < total; i++) {
+        if (!attacking) break;
+
+        stats.attempts++;
+        dosRequestCount++;
+        updateStats();
+        updateDosMeter(dosRequestCount);
+        setStatus(
+          "Flooding... " + dosRequestCount + " requests sent",
+          (i / total) * 100
+        );
+
+        try {
+          var actRes  = await fetch("http://localhost:3000/api/activity", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email:  "hacker@evil.com",
+              action: "DoS Request #" + dosRequestCount
+            })
+          });
+          var actData = await actRes.json();
+
+          // ── Session frozen → DoS detected by AI ──────────────────────────
+          if (!actData.success && actData.frozen) {
+            stats.blocked++;
+            stats.anomalies++;
+            updateStats();
+            dosDetected = true;
+            document.getElementById("dosBanner").style.display = "block";
+            addLog("🚨 DoS DETECTED! Session frozen after " +
+                   dosRequestCount + " requests!", "dos");
+            addLog("🛡 AI flagged: " + (actData.threat_label || "Suspected DoS Pattern"), "dos");
+            addLog("📧 Admin alert sent! Rate limiting triggered.", "dos");
+            setStatus("DoS DETECTED — AI blocked the attack!", 100);
+            attacking = false;
+            break;
+          }
+
+          // ── Permanent block triggered ─────────────────────────────────────
+          if (!actData.success && actData.permanent) {
+            stats.blocked++;
+            updateStats();
+            addLog("🚫 PERMANENT BLOCK triggered after DoS attempt!", "blocked");
+            setStatus("Attacker permanently blocked!", 100);
+            attacking = false;
+            break;
+          }
+
+          // ── AI anomaly detected ───────────────────────────────────────────
+          if (actData.aiResult === "ANOMALY" || actData.risk_score > 70) {
+            stats.anomalies++;
+            addLog("⚠ ANOMALY #" + stats.anomalies +
+                   " | Risk: " + actData.risk_score +
+                   "/100 | " + (actData.threat_label || "High-Risk Activity"), "anomaly");
+          } else {
+            // Only log every 5th normal request to avoid spam
+            if (dosRequestCount % 5 === 0) {
+              addLog("→ Flood request #" + dosRequestCount +
+                     " (Risk: " + (actData.risk_score || 0) + "/100)", "dos");
+            }
+          }
+
+        } catch(err) {
+          addLog("✗ Request error: " + err.message, "failed");
+        }
+
+        updateStats();
+        // Very fast requests — simulates real DoS
+        await new Promise(r => setTimeout(r, 100));
+      }
+
+      if (!dosDetected && attacking) {
+        addLog("🔵 DoS flood complete — " + dosRequestCount +
+               " requests sent. Check dashboard!", "dos");
+        setStatus("DoS simulation complete! Check dashboard.", 100);
+      }
+
+    } catch(err) {
+      addLog("✗ DoS simulation error: " + err.message, "failed");
+    }
+
+    attacking = false;
+    document.getElementById("progressBar").style.background = "#e60000";
+  }
+</script>
+</body>
+</html>

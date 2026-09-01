@@ -1,0 +1,20 @@
+{
+  "Isolation Forest": {
+    "accuracy": 88.3,
+    "precision": 0.1,
+    "recall": 0.7,
+    "f1": 0.2
+  },
+  "One-Class SVM": {
+    "accuracy": 85.5,
+    "precision": 0.6,
+    "recall": 3.7,
+    "f1": 1.0
+  },
+  "LOF": {
+    "accuracy": 90.2,
+    "precision": 10.6,
+    "recall": 54.7,
+    "f1": 17.8
+  }
+}
